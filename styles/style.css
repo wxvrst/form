@@ -1,0 +1,287 @@
+/*General==================================================*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+main{
+    background-color: #985ACE;
+    overflow: hidden;
+}
+button:hover{
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+}
+a:hover{
+    cursor: pointer;
+}
+/*Header==================================================*/
+.header{
+    background-color: white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:35px;
+    padding:24px 0;
+
+}
+.header-item{
+    border-bottom: 2px transparent solid;
+}
+.header-item:hover{
+    border-bottom: 2px rgba(152, 90, 206, 1) solid;
+}
+.header-item.phone:hover{
+    color:rgba(152, 90, 206, 1);
+    border-bottom: 2px transparent solid;
+}
+.header-item-logo{
+    margin:0 84px;
+}
+.headers-icons{
+    margin-left:30px;
+}
+.headers-icons > a {
+    margin:0 8px;
+}
+.header-icon:hover{
+    filter: brightness(0) saturate(100%) invert(45%) sepia(13%) saturate(2477%) hue-rotate(229deg) brightness(93%) contrast(95%);
+}
+/*Main form==================================================*/
+.main-form{
+    background-color:white;
+    width:458px;
+
+    margin: 88px auto;
+    border-radius:32px;
+    padding:87px 92px 83px 93px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.btn-label{
+    background:transparent;
+    border:none;
+    font-size:14px;
+    font-weight:700;
+    line-height: 16.7px;
+    text-align: center;
+    margin-right:24px;
+}
+input[type="radio"]{
+    visibility: hidden;
+    display:none;
+}
+input[type="radio"]:checked + label{
+    border-bottom: 2px rgba(152, 90, 206, 1) solid;
+    transform: scaleX(1);
+}
+.form{
+    display:flex;
+    flex-direction: column;
+    padding-top:40px;
+    gap:9px;
+}
+.input{
+    border: 1px transparent solid;
+    background-color:#F8F1FF;
+    width:273px;
+    height:40px;
+    border-radius:7px;
+    padding:20px 88px 8px 16px;
+    font-size:12px;
+}
+input:focus{
+    border:1px rgba(152, 90, 206, 1) solid;
+    outline:none;
+}
+.form-input-div{
+    position:relative;
+}
+.label{
+    position:absolute;
+    font-size:10px;
+    color:rgba(64, 58, 75, 0.6);
+    padding:3px 0 0 16px;
+}
+.addition-icons{
+    position:absolute;
+}
+#email-icon{
+    top:14px;
+    right:17px;
+}
+#password-icon{
+    top:16px;
+    right:15px;
+}
+.line{
+    width:100%;
+    border-bottom:1px black solid;
+    margin-top:12px;
+}
+.add-button{
+    margin-top:28px;
+    border:none;
+    background-color:rgba(152, 90, 206, 1);
+    color:white;
+    width:273px;
+    height:40px;
+    border-radius:7px;
+}
+.add-button.google{
+    margin-top:12px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:18px;
+    background:transparent;
+    color:black;
+    border: 1px rgba(152, 90, 206, 1) solid;
+    font-size:12px;
+}
+.add-button.reg:hover{
+    background-color:darkcyan;
+}
+.add-button.google:hover{
+    border: 1px darkcyan solid;
+}
+/*Switch Enter/Registration======================================*/
+.remember-me-block{
+    display:none;
+}
+#entr{
+    display:none;
+}
+.entry-icons{
+    display:none;
+}
+.forget-password{
+    display:none;
+    font-size:12px;
+    margin:0 auto;
+}
+.btn.entry:checked ~ form{
+    .name, .surname, .password-check{
+        display:none;
+    }
+    .remember-me-block{
+        display:flex;
+        gap:9px;
+        visibility: visible;
+        margin-top:12px;
+        *{
+            display:block;
+            visibility: visible;
+        }
+    }
+    .reg{
+        margin-top:0;
+        #regis{
+            display:none;
+        }
+        #entr{
+            display:inline;
+        }
+    }
+    .entry-icons{
+        display:block;
+    }
+    .forget-password{
+        display:block;
+    }
+}
+/*Switch Theme==================================================*/
+.switch-theme{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position:fixed;
+    right:24px;
+    bottom:24px;
+    border:none;
+    border-radius:7px;
+    background-color:lightblue;
+    width:64px;
+    height:24px;
+}
+.switch-theme:hover{
+    cursor:pointer;
+    background-color:rgba(152, 90, 206, 1);
+    border: 2px solid lightblue;
+    color:white;
+    transition: color 0.5s;
+}
+input[type="checkbox"]{
+    visibility: hidden;
+    display:none;
+}
+.switch-theme-input:checked +label {
+    color:white;
+    background-color:rgba(152, 90, 206, 1);
+}
+.switch-theme-input:checked ~ main {
+    background-color: darkcyan;
+    * {color:white;}
+    .main-form{
+        background-color: #35364c;
+    }
+    .add-button.reg{
+        background-color:darkcyan;
+    }
+    .add-button.google{
+        border:1px darkcyan solid;
+    }
+    .add-button.reg:hover{
+        background-color:rgba(152, 90, 206, 1);
+    }
+    .add-button.google:hover{
+        border: 1px rgba(152, 90, 206, 1) solid;
+    }
+    input[type="radio"]:checked + label{
+        border-bottom: 2px darkcyan solid;
+        transform: scaleX(1);
+    }
+    .input{
+        background-color: #464767;
+    }
+    input:focus{
+        border:1px darkcyan solid;
+    }
+    .line{
+        border-bottom:1px white solid;
+    }
+    .addition-icons{
+        filter: brightness(0) saturate(100%) invert(47%) sepia(73%) saturate(5946%) hue-rotate(159deg) brightness(89%) contrast(101%);
+    }
+}
+.switch-theme-input:checked ~ header{
+    background-color: #35364c;
+    a{
+        color:white;
+    }
+    img{
+        filter: brightness(0) invert(1);
+    }
+    .header-item:hover{
+        border-bottom: 2px darkcyan solid;
+    }
+    .header-item.phone:hover{
+        color:darkcyan;
+        border-bottom: 2px transparent solid;
+    }
+    .header-icon:hover{
+        filter: brightness(0) saturate(100%) invert(47%) sepia(73%) saturate(5946%) hue-rotate(159deg) brightness(89%) contrast(101%);
+    }
+
+}
+/*.body:has(> .switch-theme-input:checked){*/
+/*    background-color:rgba(152, 90, 206, 1);*/
+/*}*/
+
+

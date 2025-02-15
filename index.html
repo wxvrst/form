@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta lang="ru" charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Issue 2</title>
+    <link href="styles/style.css" type="text/css" rel="stylesheet">
+</head>
+<body class="body">
+    <!--Switch Theme Button-->
+    <input class="switch-theme-input" id="switch-theme-id" type="checkbox"/>
+    <label class="switch-theme" for="switch-theme-id">Switch</label>
+    <!--Header-->
+    <header class="header">
+        <a href="#" class="header-item">О МАГАЗИНЕ</a>
+        <a href="#" class="header-item">КАТАЛОГ</a>
+        <a href="#" class="header-item">ДОСТАВКА И ОПЛАТА</a>
+        <a href="#" class="header-item-logo"><img class="header-logo" src="images/logo.svg" alt="logo"/></a>
+        <a href="#" class="header-item">КОНТАКТЫ</a>
+        <a href="#" class="header-item phone">+380 246-893-444</a>
+        <div class="headers-icons">
+            <a href="#"><img class="header-icon user" src="images/user_icon.svg" alt="logo"/></a>
+            <a href="#"><img class="header-icon bag" src="images/bag_icon.svg" alt="logo"/></a>
+        </div>
+    </header>
+    <!--Main-->
+    <main class="main">
+        <!--Main form-->
+        <section class="main-form">
+            <input name="entry" type="radio" class="btn entry" id="enter"/>
+            <label class="btn-label" for="enter">ВХОД</label>
+
+            <input name="entry" type="radio" class="btn registy" id="registration" checked />
+            <label class="btn-label" for="registration">РЕГИСТРАЦИЯ</label>
+            <form class="form">
+                <div class="form-input-div name">
+                    <label for="name" class="label">Имя</label>
+                    <input type="text" class="input" id="name">
+                </div>
+                <div class="form-input-div surname">
+                    <label for="surname" class="label">Фамилия</label>
+                    <input type="text" class="input" id="surname">
+                </div>
+                <div class="form-input-div email">
+                    <label for="email" class="label">E-mail</label>
+                    <input type="email" class="input" id="email">
+                    <a href="#" class="entry-icons"><img class="addition-icons" id="email-icon" src="images/email-icon.svg" alt=""/></a>
+                </div>
+                <div class="form-input-div password">
+                    <label for="password" class="label">Пароль</label>
+                    <input type="password" class="input" id="password">
+                    <a href="#" class="entry-icons"><img class="addition-icons" id="password-icon"  src="images/show-password-icon.svg" alt=""/></a>
+                </div>
+                <div class="form-input-div password-check">
+                    <label for="password-check" class="label">Подтвердите пароль</label>
+                    <input type="password" class="input" id="password-check">
+                </div>
+
+                <div class="remember-me-block">
+                    <input class="remember-me" type="checkbox" id="remember-me"/>
+                    <label class="remember-me" for="remember-me">Запомнить меня</label>
+                </div>
+
+                <button class="add-button reg"><span id="regis">РЕГИСТРАЦИЯ</span><span id="entr">ВОЙТИ</span></button>
+
+                <div class="line"></div>
+
+                <div class="forget-password">
+                    <a>Забыли пароль?</a>
+                </div>
+
+                <button type="button" class="add-button google">
+                    <img class="google-logo" src="images/google-logo.png" alt="google logo"/>
+                    <span class="google-cont">Продолжить с <b>Google</b></span>
+                </button>
+
+            </form>
+        </section>
+    </main>
+    <!--Scripts-->
+    <script src="scripts/script.js"></script>
+</body>
+</html>
